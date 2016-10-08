@@ -4,16 +4,14 @@
     android:layout_height="match_parent"
     android:background="#e74c3c">
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/TvNewEmail"
-        android:hint="E-mail"
-        android:textSize="20dp"
-        android:layout_below="@+id/TvUName"
-        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"/>
 
     <EditText
         android:layout_width="300dp"
@@ -21,11 +19,23 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/TvNewPass"
-        android:hint="Password"
         android:textSize="20dp"
-        android:layout_below="@+id/TvNewEmail"
-        android:layout_alignLeft="@+id/TvNewEmail"
-        android:layout_alignStart="@+id/TvNewEmail" />
+        android:layout_marginBottom="164dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/fname"
+        android:layout_toRightOf="@+id/fname" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/TvUName"
+        android:textSize="15dp"
+        android:layout_marginBottom="54dp"
+        android:layout_above="@+id/TvNewPass"
+        android:layout_alignLeft="@+id/TvNewPass"
+        android:layout_alignStart="@+id/TvNewPass" />
 
     <EditText
         android:layout_width="300dp"
@@ -33,11 +43,76 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/TvConfirmNewPass"
-        android:hint="Confirm Password"
         android:textSize="20dp"
-        android:layout_below="@+id/TvNewPass"
-        android:layout_alignLeft="@+id/TvNewPass"
-        android:layout_alignStart="@+id/TvNewPass" />
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/TvUName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/conpass"
+        android:layout_toEndOf="@+id/conpass" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Confirm password: "
+        android:id="@+id/conpass"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/TvConfirmNewPass"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Password: "
+        android:id="@+id/pass"
+        android:textSize="19dp"
+        android:layout_below="@+id/TvUName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/TvNewEmail"
+        android:textSize="20dp"
+        android:layout_above="@+id/TvNewPass"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/pass"
+        android:layout_toEndOf="@+id/pass" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Email: "
+        android:id="@+id/email"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/TvNewEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Username: "
+        android:id="@+id/uname"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/TvUName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Last Name: "
+        android:id="@+id/lname"
+        android:textSize="20dp"
+        android:layout_above="@+id/TvUName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -48,47 +123,38 @@
         android:textSize="20dp"
         android:textAlignment="center"
         android:textColor="@color/abc_primary_text_disable_only_material_dark"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp" />
-
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:text="Sign Up"
-        android:id="@+id/TvTitle"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/foreground_material_dark"
-        android:textSize="30dp"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/TvConfirmNewPass"
         android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/TvLName"
-        android:hint="Last Name"
-        android:textSize="20dp"
-        android:layout_below="@+id/TvFName"
-        android:layout_alignLeft="@+id/TvNewPass" />
-
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
         android:id="@+id/TvFName"
-        android:hint="First Name"
+        android:textSize="15dp"
+        android:layout_above="@+id/TvLName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/lname"
+        android:layout_toEndOf="@+id/lname" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="First Name: "
+        android:id="@+id/fname"
         android:textSize="20dp"
-        android:layout_below="@+id/TvTitle"
-        android:layout_alignLeft="@+id/TvLName" />
+        android:layout_alignTop="@+id/TvFName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/TvUName"
-        android:hint="Username"
-        android:textSize="20dp"
-        android:layout_below="@+id/TvLName"
-        android:layout_alignLeft="@+id/TvLName"
-        android:layout_alignStart="@+id/TvLName" />
+        android:id="@+id/TvLName"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/lname"
+        android:layout_toRightOf="@+id/lname"
+        android:layout_toEndOf="@+id/lname" />
 
 </RelativeLayout>
