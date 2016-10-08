@@ -40,9 +40,10 @@ public class Login extends AppCompatActivity {
                 boolean res = false;
                 res = repo.validateLogin(emailTxt.getText().toString(), passwordTxt.getText().toString());
                 if (res == true) {
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    Intent intent = new Intent(Login.this, OnTouch.class);
                     intent.putExtra("username", repo.getName(emailTxt.getText().toString(), passwordTxt.getText().toString()));
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(getBaseContext(), "Username/Email or password is incorrect.", Toast.LENGTH_SHORT).show();
                 }
@@ -61,13 +62,7 @@ public class Login extends AppCompatActivity {
 
 
     }
-    @Override
-    protected  void onPause(){
-        super.onPause();
-        finish(
 
-        );
-    }
 
 
 }

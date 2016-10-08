@@ -66,8 +66,7 @@ public class SignUp extends AppCompatActivity implements android.view.View.OnCli
                                 int a = 0;
                                 a = repo.createAccount(acct);
                                 Toast.makeText(this, "New account added!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(SignUp.this, Login.class);
-                                startActivity(intent);
+                                finish();
                             }
                             else{
                                 Toast.makeText(getBaseContext(), "Username/Email already exists!", Toast.LENGTH_SHORT).show();
@@ -88,15 +87,4 @@ public class SignUp extends AppCompatActivity implements android.view.View.OnCli
         }
     }
 
-
-
-        public void back(View v) {
-            Intent intent = new Intent(SignUp.this, Login.class);
-            startActivity(intent);
-        }
-
-    protected  void onPause() {
-        super.onPause();
-        finish();
-    }
 }
