@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity {
         emailTxt = (EditText) findViewById(R.id.emailText);
         passwordTxt = (EditText) findViewById(R.id.passwordText);
         btnLogin = (Button) findViewById(R.id.loginButton);
-        show = (TextView) findViewById(R.id.textViewShow);
         signup = (TextView) findViewById(R.id.TvSignUp);
 
 
@@ -50,35 +49,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        show.setOnTouchListener(new View.OnTouchListener(){
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent){
-                int x = motionEvent.getAction();
-                //boolean res = false;
-
-                //if(x==motionEvent.ACTION_DOWN){
-                //    passwordTxt.setTransformationMethod(null);
-                //    res = true;
-                //}
-                int cursor = passwordTxt.getSelectionStart();
-                switch (x){
-                    case MotionEvent.ACTION_DOWN:
-                        Log.d("Login.java", "ACTION_DOWN");
-                        passwordTxt.setTransformationMethod(null);
-                        passwordTxt.setSelection(cursor);
-                        //res = true;
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        Log.d("Login.java", "ACTION_UP");
-                        passwordTxt.setTransformationMethod(new PasswordTransformationMethod());
-                        passwordTxt.setSelection(cursor);
-                        //res = false;
-                        break;
-                }
-
-                return true;//res;
-            }
-        });
 
         signup.setOnClickListener(new OnClickListener() {
             @Override
@@ -91,9 +61,6 @@ public class Login extends AppCompatActivity {
 
 
     }
-
-
-
     @Override
     protected  void onPause(){
         super.onPause();

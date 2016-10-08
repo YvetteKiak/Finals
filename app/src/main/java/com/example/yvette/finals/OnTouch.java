@@ -78,6 +78,10 @@ public class OnTouch extends AppCompatActivity {
                         if(x1>X && y1<Y){
                             quadrant = "Quadrant 1";
                         }
+                        if(x-x1 == 0 && y-y1 == 0) {
+                            quadrant = " ";
+                        }
+
 
                         tv1.setText("X1, X2: " + x + ", " + x1);
                         tv2.setText("Y1, Y2: " + y + ", " + y1);
