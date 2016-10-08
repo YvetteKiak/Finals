@@ -87,6 +87,14 @@ public class SignUp extends AppCompatActivity implements android.view.View.OnCli
             }
         }
     }
+
+
+
+        public void back(View v) {
+            Intent intent = new Intent(SignUp.this, Login.class);
+            startActivity(intent);
+        }
+
     protected  void onPause() {
         super.onPause();
         finish();
